@@ -1,15 +1,35 @@
 const mongoose = require('mongoose');
-const { stringify } = require('uuid');
 
 const { Schema} = mongoose;
 
 const BookSchema = new Schema ({
-    username: String,
-    authorName: String,
-    bookTitle: String,
-    price: String,
-    description: String,
-    categories: String,
+    username: { 
+        type: String,
+        required: true
+    },
+    author: { 
+        type: String,
+        required: true
+    },
+    
+    title: { 
+        type: String,
+        required: true
+    },
+    price: { 
+        type: Number,
+        required: true
+    },
+
+    description: { 
+        type: String,
+        required: true
+    },
+
+    bookImg:{
+        type: String
+    }
+
 
 }, {timestamps: true});
 

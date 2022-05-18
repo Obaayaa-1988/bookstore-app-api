@@ -22,6 +22,8 @@ app.use(express.urlencoded({
 
 }))
 
+app.use(booksRoute);
+
 const mongoUri = process.env.MongoURL;
 
 mongoose.connect(mongoUri, {useNewUrlParser: true, useUnifiedTopology : true})
@@ -32,7 +34,10 @@ mongoose.connect(mongoUri, {useNewUrlParser: true, useUnifiedTopology : true})
     console.log(err)
 })
 
-app.use(booksRoute);
+app.use(express.static('public'));
+
+
+
 
 
 
