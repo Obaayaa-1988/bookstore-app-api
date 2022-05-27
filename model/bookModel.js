@@ -3,6 +3,11 @@ const mongoose = require('mongoose');
 const { Schema} = mongoose;
 
 const BookSchema = new Schema ({
+    number: { 
+        type: String,
+        required: true
+    },
+
     username: { 
         type: String,
         required: true
