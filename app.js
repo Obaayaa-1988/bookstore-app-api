@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose")
 const booksRoute = require("./routes/bookRoutes");
+const userRouter = require("./routes/bookUserRoute")
 const cors = require('cors');
 const path = require('path');
 const dotenv = require("dotenv").config();
@@ -22,7 +23,6 @@ app.use(express.urlencoded({
 
 }))
 
-app.use(booksRoute);
 
 const mongoUri = process.env.MongoURL;
 
@@ -33,6 +33,10 @@ mongoose.connect(mongoUri, {useNewUrlParser: true, useUnifiedTopology : true})
 }).catch(err => {
     console.log(err)
 })
+
+app.use(booksRoute);
+app.use(userRouter);
+
 
 app.use(express.static('public'));
 

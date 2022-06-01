@@ -8,9 +8,11 @@ const{
 
 } = require("../controllers/bookUserController")
 
-router.post("/api/sign-up", signUser)
-router.get("api/log-in", loginUser)
+router.post("/api/sign-up", signUser )
+router.get("/api/log-in", loginUser)
 
 //routes for signing up
+
+
 
 module.exports = router
