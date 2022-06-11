@@ -13,6 +13,4 @@ router.get("/api/log-in", loginUser)
 
 //routes for signing up
 
-
-
 module.exports = router
