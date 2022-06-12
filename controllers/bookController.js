@@ -13,6 +13,7 @@ const addNewBook = async (req, res) =>{
             username: req.body.username,
             author: req.body.author,
             title: req.body.title,
+            category: req.body.category,
             price: req.body.price,
             description: req.body.description,
             bookImg: req.file.originalname
