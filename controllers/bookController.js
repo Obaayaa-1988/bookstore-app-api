@@ -9,6 +9,7 @@ const bcrypt = require("bcrypt");
 //req.body to access data in json format from the client side
 const addNewBook = async (req, res) =>{
     // const {username, author, title, price, description} = req.body;
+    console.log("heyyyaaaa", req.file)
         const bookUser = {
             username: req.body.username,
             author: req.body.author,
@@ -17,6 +18,7 @@ const addNewBook = async (req, res) =>{
             price: req.body.price,
             description: req.body.description,
             bookImg: req.file.originalname
+
         };
 
         //
@@ -56,6 +58,7 @@ const getOneBook = (req, res) => {
         }
     }).catch(err => console.log(err))
 
+
 }
 
 //a user deleting a book he/she added
@@ -89,6 +92,7 @@ const updateBook = (req, res) => {
     }).catch((err) => {
         console.log({ message: "book updated successfully"})
     })
+    
 
     
 }
