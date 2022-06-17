@@ -20,6 +20,8 @@ const BookSchema = new Schema ({
     category: { 
         type: String,
         required: true
+
+
     },
 
 
@@ -34,7 +36,7 @@ const BookSchema = new Schema ({
         required: true
     },
 
-    bookImg:{
+    image:{
         type: String
     }
 

@@ -30,6 +30,7 @@ const storage = multer.diskStorage({
         const uniqueSuffix = file.originalname
         cb(null, file.fieldname + uniqueSuffix)
         console.log(uniqueSuffix)
+        
 
 
     },
@@ -38,7 +39,11 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage})
 
-router.post('/api/books',upload.single('bookImg'), addNewBook )
+// router.post('/api/books', addNewBook )
+router.post('/api/books',upload.single("image"), addNewBook )
+
+
+
 
 
 

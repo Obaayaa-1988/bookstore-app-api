@@ -17,7 +17,8 @@ const addNewBook = async (req, res) =>{
             category: req.body.category,
             price: req.body.price,
             description: req.body.description,
-            bookImg: req.file.originalname
+            image:req.file.originalname
+
 
         };
 
@@ -31,6 +32,7 @@ const addNewBook = async (req, res) =>{
             if(results) res.send(results)
         }).catch (err => {
             console.log(err)
+
         })
 
 }
@@ -45,6 +47,7 @@ const getAllBooks = (req, res) => {
         res.send(results)
     }).catch(err => {
         console.log(err.message)
+
     })
 
 }
@@ -92,7 +95,7 @@ const updateBook = (req, res) => {
     }).catch((err) => {
         console.log({ message: "book updated successfully"})
     })
-    
+
 
     
 }
