@@ -39,6 +39,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage})
 
+
 // router.post('/api/books', addNewBook )
 router.post('/api/books',upload.single("image"), addNewBook )
 
