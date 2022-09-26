@@ -25,7 +25,7 @@ router.put('/api/book/:id', updateBook)
 //uploading the book image to the database
 const storage = multer.diskStorage({
     destination: function (req, file, cb){
-        cb(null,'public/uploads')
+        cb(null,'images')
     },
     filename: function(req, file, cb){
         const uniqueSuffix = file.originalname

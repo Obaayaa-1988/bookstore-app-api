@@ -27,26 +27,36 @@ app.use(express.json())
 app.use(express.urlencoded({
   extended: true
 
+
+
 }))
+
+app.use(express.static('images'));
+app.use('/images', express.static('images'))
+
 
 app.use(booksRoute);
 app.use(userRouter);
 
 
+<<<<<<< HEAD
+
 
 
 const mongoUri = process.env.MongoURL;
+=======
+// const mongoUri = process.env.MongoURL;
+>>>>>>> c52ec94d25022b90ee28ab40448b59beea69cc1e
 
-mongoose.connect(mongoUri, {useNewUrlParser: true, useUnifiedTopology : true})
-.then(result => {
-    if(result)
-    console.log("connected uploaded books to database ")
-}).catch(err => {
-    console.log(err) 
-})
+// mongoose.connect(mongoUri, {useNewUrlParser: true, useUnifiedTopology : true})
+// .then(result => {
+//     if(result)
+//     console.log("connected uploaded books to database ")
+// }).catch(err => {
+//     console.log(err) 
+// })
 
 
-app.use(express.static('public'));
 
 
 
