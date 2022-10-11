@@ -48,7 +48,7 @@ const mongoUri = process.env.MongoURL;
 mongoose.connect(mongoUri, {useNewUrlParser: true, useUnifiedTopology : true})
 .then(result => {
     if(result)
-    console.log("connected uploaded books to database ")
+    console.log("connected uploaded books to database on mongo atlas ")
 }).catch(err => {
     console.log(err) 
 })
