@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 8595
 //middleware
 app.use(cors({
   credentials: true,
-  origin:"http://localhost:3000",
+  origin:"http://localhost:3001",
   methods: "GET, POST, OPTIONS, PUT, DELETE "
 }))
 
