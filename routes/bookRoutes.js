@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
     },
     filename: function(req, file, cb){
         const uniqueSuffix = file.originalname
-        cb(null, file.fieldname + uniqueSuffix)
+        cb(null,  uniqueSuffix)
         console.log('nnmmmm', uniqueSuffix)
         
 
