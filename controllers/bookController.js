@@ -18,7 +18,7 @@ const addNewBook = async (req, res) =>{
             price: req.body.price,
             description: req.body.description,
             image:req.file.originalname
-
+        
 
         };
 
